@@ -1,0 +1,22 @@
+Package: play4j
+Title: Neo4j Orchestration
+Version: 0.0.0.9000
+Authors@R: person('Colin', 'Fay', email = 'colin@thinkr.fr', role = c('cre', 'aut'))
+Description: Manage your Neo4J installation from R.
+License: MIT + file LICENSE
+LazyData: true
+URL: https://github.com/thinkr/play4j
+BugReports: https://github.com/thinkr/play4j/issues
+Encoding: UTF-8
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+Imports: 
+    attempt,
+    R6,
+    glue,
+    jsonlite,
+    httr
+VignetteBuilder: knitr
+RoxygenNote: 6.0.1

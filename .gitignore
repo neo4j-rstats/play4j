@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+.RData
+inst/doc
+inst/neo4j
+inst/neo4j-community-3.3.3
+
