@@ -26,7 +26,7 @@ You can install {run4j} from GitHub with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("ThinkR-open/run4j")
+remotes::install_github("ThinkR-open/play4j")
 ```
 
 ## Example
@@ -77,11 +77,11 @@ cypher_con$restart()
 ``` r
 # See the last 5 lines
 cypher_con$see_logs(size = 5)
-#> 2018-03-09 14:50:49.836+0000 INFO  Bolt enabled on 127.0.0.1:7687.
-#> 2018-03-09 14:51:03.610+0000 INFO  ======== Neo4j 3.3.3 ========
-#> 2018-03-09 14:51:03.666+0000 INFO  Starting...
-#> 2018-03-09 14:51:04.494+0000 INFO  Neo4j Server shutdown initiated by request
-#> 2018-03-09 14:51:04.881+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+#> 2018-03-09 14:51:08.407+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+#> 2018-03-09 15:20:20.778+0000 INFO  ======== Neo4j 3.3.3 ========
+#> 2018-03-09 15:20:20.965+0000 INFO  Starting...
+#> 2018-03-09 15:20:21.677+0000 INFO  Neo4j Server shutdown initiated by request
+#> 2018-03-09 15:20:23.167+0000 INFO  Bolt enabled on 127.0.0.1:7687.
 cypher_con$see_certificates()
 #> neo4j.cert
 #> neo4j.key

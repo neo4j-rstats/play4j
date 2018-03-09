@@ -33,7 +33,7 @@ You can install {run4j} from GitHub with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("remotes")
-remotes::install_github("ThinkR-open/run4j")
+remotes::install_github("ThinkR-open/play4j")
 ```
 
 ## Example

@@ -1,11 +1,3 @@
-#' Download Neo4J community
-#'
-#' @param path where to download Neo4J. Default is in the package folder.
-#' @param flavor wether to download for unix or windows.
-#'
-#' @return an installed Neo4J
-#'
-
 download_4j <- function(path = "internal", flavor = c("unix", "windows")){
   if (path == "internal"){
     path <- system.file(package = "run4j")
