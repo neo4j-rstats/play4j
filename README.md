@@ -16,13 +16,13 @@ might not work on others :
     
       - Mac OSX
 
-# run4j
+# play4j
 
-The goal of run4j is to facilitate Neo4J orchestration from R.
+The goal of play4j is to facilitate Neo4J orchestration from R.
 
 ## Installation
 
-You can install {run4j} from GitHub with:
+You can install {play4j} from GitHub with:
 
 ``` r
 # install.packages("remotes")
@@ -39,7 +39,7 @@ remotes::install_github("ThinkR-open/play4j")
 <!-- end list -->
 
 ``` r
-cypher_con <- run4j::neo4j_shell$new("/Users/colin/neo4j/")
+cypher_con <- play4j::neo4j_shell$new("/Users/colin/neo4j/")
 ```
 
   - Start Neo4J :
@@ -77,11 +77,11 @@ cypher_con$restart()
 ``` r
 # See the last 5 lines
 cypher_con$see_logs(size = 5)
-#> 2018-03-09 14:51:08.407+0000 INFO  Bolt enabled on 127.0.0.1:7687.
-#> 2018-03-09 15:20:20.778+0000 INFO  ======== Neo4j 3.3.3 ========
-#> 2018-03-09 15:20:20.965+0000 INFO  Starting...
-#> 2018-03-09 15:20:21.677+0000 INFO  Neo4j Server shutdown initiated by request
-#> 2018-03-09 15:20:23.167+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+#> 2018-03-09 15:20:27.208+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+#> 2018-03-09 15:22:39.929+0000 INFO  ======== Neo4j 3.3.3 ========
+#> 2018-03-09 15:22:40.035+0000 INFO  Starting...
+#> 2018-03-09 15:22:41.207+0000 INFO  Neo4j Server shutdown initiated by request
+#> 2018-03-09 15:22:41.951+0000 INFO  Bolt enabled on 127.0.0.1:7687.
 cypher_con$see_certificates()
 #> neo4j.cert
 #> neo4j.key
@@ -119,7 +119,7 @@ If you simply want to make API calls, start a new `neo4j_api`
 object:
 
 ``` r
-api_con <- run4j::neo4j_api$new(url = "http://localhost:7474", user = "neo4j", password = "pouetpouet")
+api_con <- play4j::neo4j_api$new(url = "http://localhost:7474", user = "neo4j", password = "pouetpouet")
 ```
 
 Then query (result as JSON or as an R list):
@@ -160,7 +160,7 @@ commands](https://neo4j.com/docs/operations-manual/current/tools/neo4j-admin/)
 by creating a new neo4j\_admin object:
 
 ``` r
-admin <- run4j::neo4j_admin$new("/Users/colin/neo4j/")
+admin <- play4j::neo4j_admin$new("/Users/colin/neo4j/")
 ```
 
 You can call admin commands with args that looks like shell commands
