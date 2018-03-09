@@ -46,6 +46,14 @@ remotes::install_github("ThinkR-open/play4j")
 cypher_con <- play4j::neo4j_shell$new("/Users/colin/neo4j/")
 ```
 
+Verify the Neo4J shell was found by running : 
+
+```{r}
+cypher_con$cypher_shell
+```
+
+You should get a path to the cypher shell. If the returned value is `character(0)`, please check the path you have provided.
+
 + Start Neo4J : 
 
 ```{r}
@@ -90,6 +98,7 @@ cypher_con$status()
 + Get Neo4J version
 
 ```{r}
+# Apparently not available on windows
 cypher_con$version()
 ```
 

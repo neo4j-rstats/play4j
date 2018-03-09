@@ -42,6 +42,16 @@ remotes::install_github("ThinkR-open/play4j")
 cypher_con <- play4j::neo4j_shell$new("/Users/colin/neo4j/")
 ```
 
+Verify the Neo4J shell was found by running :
+
+``` r
+cypher_con$cypher_shell
+#> [1] "/Users/colin/neo4j/bin/cypher-shell"
+```
+
+You should get a path to the cypher shell. If the returned value is
+`character(0)`, please check the path you have provided.
+
   - Start Neo4J :
 
 <!-- end list -->
@@ -77,11 +87,11 @@ cypher_con$restart()
 ``` r
 # See the last 5 lines
 cypher_con$see_logs(size = 5)
-#> 2018-03-09 15:20:27.208+0000 INFO  Bolt enabled on 127.0.0.1:7687.
-#> 2018-03-09 15:22:39.929+0000 INFO  ======== Neo4j 3.3.3 ========
-#> 2018-03-09 15:22:40.035+0000 INFO  Starting...
-#> 2018-03-09 15:22:41.207+0000 INFO  Neo4j Server shutdown initiated by request
-#> 2018-03-09 15:22:41.951+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+#> 2018-03-09 15:22:45.212+0000 INFO  Bolt enabled on 127.0.0.1:7687.
+#> 2018-03-09 15:33:47.424+0000 INFO  ======== Neo4j 3.3.3 ========
+#> 2018-03-09 15:33:47.493+0000 INFO  Starting...
+#> 2018-03-09 15:33:48.229+0000 INFO  Neo4j Server shutdown initiated by request
+#> 2018-03-09 15:33:49.087+0000 INFO  Bolt enabled on 127.0.0.1:7687.
 cypher_con$see_certificates()
 #> neo4j.cert
 #> neo4j.key
@@ -102,6 +112,7 @@ cypher_con$status()
 <!-- end list -->
 
 ``` r
+# Apparently not available on windows
 cypher_con$version()
 ```
 
